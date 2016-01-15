@@ -15,6 +15,7 @@ namespace PropertyChangedTests
 			t.IntProperty = 1;
 			t.PropertyChanged += (s, e) =>
 			{
+				Assert.AreEqual(e.PropertyName, "IntProperty");
 				var ee = e.As<int>();
 				Assert.AreEqual(ee.OldValue, 1);
 				Assert.AreEqual(ee.CurrentValue, 2);
@@ -32,6 +33,7 @@ namespace PropertyChangedTests
 			t.StringProperty = "one";
 			t.PropertyChanged += (s, e) =>
 			{
+				Assert.AreEqual(e.PropertyName, "StringProperty");
 				var ee = e.As<string>();
 				Assert.AreEqual(ee.OldValue, "one");
 				Assert.AreEqual(ee.CurrentValue, "two");
@@ -50,6 +52,7 @@ namespace PropertyChangedTests
 
 			t.PropertyChanging += (s, e) =>
 			{
+				Assert.AreEqual(e.PropertyName, "IntProperty");
 				var ee = e.As<int>();
 				Assert.AreEqual(ee.CurrentValue, 1);
 				Assert.AreEqual(ee.NewValue, 2);
@@ -70,6 +73,7 @@ namespace PropertyChangedTests
 
 			t.PropertyChanging += (s, e) =>
 			{
+				Assert.AreEqual(e.PropertyName, "StringProperty");
 				var ee = e.As<string>();
 				Assert.AreEqual(ee.CurrentValue, "one");
 				Assert.AreEqual(ee.NewValue, "two");
