@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PropertyChanged
+namespace NullReference.PropertyChanged
 {
 	public class CancellablePropertyChangingEventArgs : PropertyChangingEventArgs
 	{

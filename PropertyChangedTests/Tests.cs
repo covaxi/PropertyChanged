@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PropertyChanged;
+using NUnit.Framework;
+using NullReference.PropertyChanged;
 
-namespace PropertyChangedTests
+namespace NullReference.Tests.PropertyChanged
 {
-	[TestClass]
+	[TestFixture]
 	public class Tests
 	{
-		[TestMethod]
+		[Test]
 		public void TestPropertyChangedInt()
 		{
 			var t = Creator.CreateViewModel<TestClass>();
@@ -25,7 +25,7 @@ namespace PropertyChangedTests
 			Assert.AreEqual(eventRaised, true);
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestPropertyChangedString()
 		{
 			var t = Creator.CreateViewModel<TestClass>();
@@ -43,7 +43,7 @@ namespace PropertyChangedTests
 			Assert.AreEqual(eventRaised, true);
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestPropertyChangingInt()
 		{
 			var t = Creator.CreateViewModel<TestClass>();
@@ -64,7 +64,7 @@ namespace PropertyChangedTests
 			Assert.AreEqual(eventRaised, true);
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestPropertyChangingString()
 		{
 			var t = Creator.CreateViewModel<TestClass>();
@@ -85,7 +85,7 @@ namespace PropertyChangedTests
 			Assert.AreEqual(eventRaised, true);
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestCancel()
 		{
 			var t = Creator.CreateViewModel<TestClass>();

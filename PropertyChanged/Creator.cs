@@ -1,11 +1,10 @@
-using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 
-namespace PropertyChanged
+namespace NullReference.PropertyChanged
 {
 	public static class Creator
 	{
